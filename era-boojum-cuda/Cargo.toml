@@ -1,0 +1,55 @@
+[package]
+name = "boojum-cuda"
+version = "0.1.0"
+edition = "2021"
+build = "build/main.rs"
+license = "MIT OR Apache-2.0"
+
+[build-dependencies]
+boojum = { path = "../era-boojum" }
+cudart-sys = { path = "../era-cuda/cudart-sys" }
+cmake = "0.1.51"
+itertools = "0.11.0"
+
+[dependencies]
+boojum = { path = "../era-boojum" }
+cudart = { path = "../era-cuda/cudart" }
+cudart-sys = { path = "../era-cuda/cudart-sys" }
+itertools = "0.11.0"
+lazy_static = "1.5.0"
+phf = { version = "0.11.3", features = ["macros"] }
+serde_json = "1.0.132"
+
+[dev-dependencies]
+blake2 = "^0"
+criterion = "0.5.1"
+criterion-cuda = { path = "../era-cuda/criterion-cuda" }
+criterion-macro = "^0"
+itertools = "0.11.0"
+rand = "0.8.5"
+rayon = "=1.10.0"
+serial_test = "2.0.0"
+
+[[bench]]
+name = "blake2s"
+harness = false
+
+[[bench]]
+name = "gates"
+harness = false
+
+[[bench]]
+name = "goldilocks"
+harness = false
+
+[[bench]]
+name = "ntt"
+harness = false
+
+[[bench]]
+name = "ops_complex"
+harness = false
+
+[[bench]]
+name = "poseidon"
+harness = false

@@ -1,0 +1,49 @@
+This repository is the open-source implementation of MegaZK
+(ICS '26; https://doi.org/10.1145/3797905.3807842). It is a monorepo fork that
+vendors several upstream projects.
+Do not treat the root dual-license files as a rewrite of those copyrights.
+
+Proving system
+  plonky2
+    https://github.com/0xPolygonZero/plonky2
+    Location in this tree: plonky2/
+    License: MIT OR Apache-2.0
+    Copyright: The Plonky2 Authors (see plonky2/*/LICENSE-MIT and LICENSE-APACHE)
+  era-boojum
+    https://github.com/matter-labs/era-boojum
+    Location in this tree: era-boojum/
+    License: MIT OR Apache-2.0
+    Copyright: Matter Labs
+  era-cuda
+    https://github.com/matter-labs/era-cuda
+    Location in this tree: era-cuda/
+    License: MIT OR Apache-2.0
+    Copyright: Matter Labs
+  era-boojum-cuda
+    https://github.com/matter-labs/era-boojum-cuda
+    Location in this tree: era-boojum-cuda/
+    License: MIT OR Apache-2.0
+    Copyright: Matter Labs
+
+Benchmark circuits / gadgets (see root README for how each is run)
+  Factorial, Fibonacci
+    https://github.com/0xPolygonZero/plonky2
+    Location: plonky2/plonky2/examples/
+  SHA256
+    https://github.com/polymerdao/plonky2-sha256
+    Location: plonky2-sha256/
+  SHA512
+    https://github.com/polymerdao/plonky2-sha512
+    Location: plonky2-sha512/
+  ECDSA
+    Example: https://github.com/qope/plonky2-examples
+    Gadget:  https://github.com/0xPolygonZero/plonky2-ecdsa
+    Location: plonky2-examples/, plonky2-ecdsa/
+  Ed25519
+    This tree vendors https://github.com/Electron-Labs/plonky2_ed25519
+    Location: plonky2_ed25519/
+    ICS '26 paper cites https://github.com/polymerdao/plonky2-ed25519
+  MVM
+    https://github.com/worldcoin/proto-neural-zkp
+    Location: proto-neural-zkp/
+    License: MIT (see proto-neural-zkp/LICENSE.md, Copyright Worldcoin)

@@ -1,0 +1,9 @@
+# Local Configs
+.vscode
+.idea
+
+target
+
+# Local Files
+*.json
+Cargo.lock

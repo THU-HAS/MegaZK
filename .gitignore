@@ -1,0 +1,20 @@
+# Local Configs
+.vscode
+.idea
+
+# Draft
+/plonky2/plonky2/tests/playground.rs
+
+# Local Files
+*.json
+*.nsys-rep
+*.ncu-rep
+*.txt
+*.csv
+*.sqlite
+*.ipynb
+*.pdf
+
+target
+
+/refactor/

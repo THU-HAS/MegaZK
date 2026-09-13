@@ -1,0 +1,42 @@
+[workspace]
+resolver = "2"
+members = [
+    "plonky2/field",
+    "plonky2/maybe_rayon",
+    "plonky2/util",
+    "plonky2/plonky2",
+    "plonky2-gpu-bench",
+
+    "era-cuda/cudart-sys",
+    "era-cuda/cudart",
+    "era-cuda/criterion-cuda",
+    "era-boojum",
+    "era-boojum/cs_derive",
+    "era-boojum-cuda",
+
+    "plonky2-crypto",
+    "plonky2-ecdsa",
+    "plonky2-sha256",
+    "plonky2-sha512",
+    "plonky2_sha512",
+    "plonky2-examples",
+    "plonky2_ed25519",
+    "proto-neural-zkp",
+]
+exclude = [
+    "era-boojum/profiling-target",
+    "plonky2/evm",
+    "plonky2/starky",
+    "plonky2-crypto/examples/hello-world",
+]
+
+[patch.crates-io]
+plonky2 = { path = "plonky2/plonky2" }
+plonky2_maybe_rayon = { path = "plonky2/maybe_rayon" }
+
+[profile.release]
+opt-level = 3
+incremental = true
+
+[profile.bench]
+opt-level = 3

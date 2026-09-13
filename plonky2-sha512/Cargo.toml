@@ -1,0 +1,35 @@
+[package]
+name = "plonky2_sha512"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[features]
+default = []
+gpu = ["plonky2/gpu", "dep:cudart"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+plonky2 = { path = "../plonky2/plonky2"}
+plonky2-gpu-bench = { path = "../plonky2-gpu-bench" }
+plonky2_util = { path = "../plonky2/util"}
+plonky2_field = { path = "../plonky2/field"}
+plonky2_crypto = {path = "../plonky2-crypto"}
+
+itertools = "0.11.0"
+rayon = "=1.10.0"
+rayon-core = "=1.12.1"
+serde = { version = "1.0", features = ["derive"] }
+anyhow = "1.0.40"
+log = "0.4.14"
+num = { version = "0.4", features = ["rand"] }
+rand = "0.8.5"
+rand_chacha = "0.3.1"
+unroll = "0.1.5"
+keccak-hash = "0.10.0"
+static_assertions = "1.1.0"
+sha2 = "0.10"
+env_logger = "0.10.0"
+cudart = { path = "../era-cuda/cudart", optional = true }
+structopt = "0.3"
